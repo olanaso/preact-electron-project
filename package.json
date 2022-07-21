@@ -1,0 +1,54 @@
+{
+  "name": "catastro-peru",
+  "version": "0.1.9",
+  "private": true,
+  "engines": {
+    "node": "^8.9.0",
+    "npm": "^5.6.0"
+  },
+  "scripts": {
+    "dev": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "build": "rollup --config",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "build": {
+    "appId": "idom.peru.catastro",
+    "productName": "Catastro Perú",
+    "mac": {
+      "category": "your.app.category.type"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.png"
+    },
+    "nsis": {
+      "oneClick": false
+    },
+    "files": [
+      "**/*",
+      "build/**/*"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^8.1.1",
+    "electron-builder": "^22.4.1",
+    "eslint": "^6.8.0",
+    "import-http": "^0.3.1",
+    "rollup": "^1.31.1",
+    "rollup-plugin-copy": "^3.3.0",
+    "rollup-plugin-delete": "^1.2.0",
+    "rollup-plugin-replace": "^2.2.0"
+  },
+  "dependencies": {},
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:kinequo/clients/catastro-peru.git"
+  },
+  "description": ""
+}
